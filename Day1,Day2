@@ -8,7 +8,7 @@ class Main{
        else
        System.out.print("No name");
     }
-}//output: Gouse
+}//output: Mano
 //use case of if else when if condition false
 import java.util.Scanner;
 class Main{
@@ -21,6 +21,8 @@ class Main{
        System.out.println(a-8);
     }
 }
+
+//output:-5
 
 //associvity rule from left right since both / and * are same
 import java.util.Scanner;
@@ -40,14 +42,18 @@ import java.util.Scanner;
 class Main{
     public static void main(String[] args){
     Scanner sc = new Scanner(System.in);
-       if(2+2==4)
+       if(2+2==4){
        System.out.println("hi");
        System.out.println(" Manoj");
-       else
+       }
+       else{
        System.out.println("Sorry");
+       }
     }
 }
-//error
+//output:hi
+ Manoj
+
 
 //odd or even
 import java.util.Scanner;
@@ -83,6 +89,9 @@ class Main{
         sc.close();
     }
 }
+//output: Enter TWO  Numbers :43
+83
+43AND 83 ARE NOT EQUAl
 
 /*write a java program to check the given person age to vote or not*/
 import java.util.Scanner;
@@ -101,6 +110,8 @@ class Main{
         sc.close();
     }
 }
+//output: Enter your age :21
+you can vote
 
 /*write a java program to check whther number is divisible by if not print the reaminder at end */
 import java.util.Scanner;
