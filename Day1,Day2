@@ -4,7 +4,7 @@ class Main{
     public static void main(String[] args){
     Scanner sc = new Scanner(System.in);
        if(true)
-       System.out.print("Gouse");
+       System.out.print("Mano");
        else
        System.out.print("No name");
     }
@@ -42,7 +42,7 @@ class Main{
     Scanner sc = new Scanner(System.in);
        if(2+2==4)
        System.out.println("hi");
-       System.out.println(" GOuse");
+       System.out.println(" Manoj");
        else
        System.out.println("Sorry");
     }
@@ -72,11 +72,11 @@ import java.util.Scanner;
 class Main{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter TWO  NumberS :");
+        System.out.print("Enter TWO  Numbers :");
         int a=sc.nextInt();
         int b=sc.nextInt();
         if (a!=b){
-            System.out.println(a +"AND "+b+" ARE NOT EQUal");
+            System.out.println(a +"AND "+b+" ARE NOT EQUAl");
         }else{
             System.out.println(a +"and "+b +" ARE  EQUAL");
         }
