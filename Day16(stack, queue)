@@ -187,82 +187,98 @@ public class Main{
 3.display
 
 4.exit
-1
-1
 
-1.enqueue
+//stack with linked list
+import java.util.*;
 
-2.dequeue
+class Stack {
+    class Node {
+        int data;
+        Node next;
 
-3.display
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
 
-4.exit
-1
-2
+    Node top = null;
 
-1.enqueue
+    void push(int data) {
+        Node newNode = new Node(data);
+        newNode.next = top;
+        top = newNode;
+    }
 
-2.dequeue
+    int pop() {
+        if (top == null) {
+            System.out.println("Stack is empty");
+            return -1;
+        }
 
-3.display
+        int data = top.data;
+        top = top.next;
+        return data;
+    }
 
-4.exit
-1
-2 3
+    void display() {
+        if (top == null) {
+            System.out.println("Stack is empty");
+            return;
+        }
 
-1.enqueue
+        Node temp = top;
 
-2.dequeue
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
 
-3.display
+        System.out.println();
+    }
+}
 
-4.exit
-1
-4
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-1.enqueue
+        Stack s = new Stack();
 
-2.dequeue
+        while (true) {
+            System.out.println("\n1.push");
+            System.out.println("2.pop");
+            System.out.println("3.display");
+            System.out.println("4.exit");
 
-3.display
+            int choice = sc.nextInt();
 
-4.exit
-1
-5
+            switch (choice) {
+                case 1: {
+                    int data = sc.nextInt();
+                    s.push(data);
+                    break;
+                }
 
-1.enqueue
+                case 2: {
+                    int data = s.pop();
+                    if (data != -1) {
+                        System.out.println("Popped: " + data);
+                    }
+                    break;
+                }
 
-2.dequeue
+                case 3: {
+                    s.display();
+                    break;
+                }
 
-3.display
+                case 4: {
+                    return;
+                }
 
-4.exit
-3
-1 2 3 4 5 
-
-1.enqueue
-
-2.dequeue
-
-3.display
-
-4.exit
-2
-
-1.enqueue
-
-2.dequeue
-
-3.display
-
-4.exit
-3
-2 3 4 5 
-
-1.enqueue
-
-2.dequeue
-
-3.display
-
-4.exit
+                default:
+                    System.out.println("Invalid choice");
+            }
+        }
+    }
+}
